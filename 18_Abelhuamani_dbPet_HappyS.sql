@@ -1,10 +1,11 @@
-CREATE DATABASE dbPet_Happy;
+CREATE DATABASE dbPet_HappyS;
 GO
 
 set language spanish;
 
-use dbPet_Happy;
+use dbPet_HappyS;
 GO
+
 -- tables
 -- Table: CLIENTE
 CREATE TABLE CLIENTE (
@@ -112,7 +113,16 @@ CREATE TABLE VENTA (
 ----INSERT INTO VENTA
 INSERT INTO VENTA (FACVEN,FECVEN,IDEMP,IDCLI)
 	VALUES  ('12345678','22/04/22','1','1'),
+			('12345678','22/05/22','2','3'),
+			---
+			('12345678','22/05/22','2','1'),
 			('12345678','22/05/22','2','2'),
+			('12345678','22/05/22','2','1'),
+			('12345678','22/05/22','2','3'),
+			('12345678','22/05/22','2','1'),
+			('12345678','22/05/22','2','2'),
+			('12345678','22/05/22','2','1'),
+			---
 			('12345678','22/03/22','1','3');
 
 -- Table: VENTA_DETALLE
@@ -128,6 +138,15 @@ CREATE TABLE VENTA_DETALLE (
 INSERT INTO VENTA_DETALLE(CANVENT,IDVEN,IDPRO)
 VALUES  ('10','1','1'),
 		('5','2','2'),
+		--
+		('4','1','1'),
+		('2','2','2'),
+		('5','1','1'),
+		('3','2','2'),
+		('2','1','1'),
+		('1','2','2'),
+		('3','1','1'),
+		--
 		('2','3','1');
 
 -- foreign keys
